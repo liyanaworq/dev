@@ -33,11 +33,10 @@ export const getAllTransactions = async (department:string) => {
     if (data.length === 0) break;
 
     allData.push(...data);
-    console.log(`Fetched page ${pageNo} with ${data.length} records.`);
-    pageNo++;
+   // pageNo++;
   }
 
   const finalData = allData.filter(i=> i.deptName === department)
-  console.log("finalData",finalData)
+  //console.log("finalData",finalData)
   return { data: finalData, startDate, endDate };
 };
